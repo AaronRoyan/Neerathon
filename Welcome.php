@@ -46,12 +46,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['userName'])) {
                 <table cellpadding="0" cellspacing="0" border="0">
                     <thead>
                         <tr>
-                            <th>First name</th>
-                            <th>Last name</th>
+                            <th>Full Name</th>
                             <th>Email</th>
                             <th>Phone Number</th>
                             <th>Josephite</th>
                             <th>Event (KMs)</th>
+                            <th>ID Card</th>
                         </tr>
                     </thead>
                 </table>
@@ -63,12 +63,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['userName'])) {
                     ?>
                         <tbody>
                             <tr>
-                                <td><?php echo $rows['firstName'] ?></td>
-                                <td><?php echo $rows['lastName'] ?></td>
+                                <td><?php echo $rows['fullName'] ?></td>
                                 <td><?php echo $rows['email'] ?></td>
                                 <td><?php echo $rows['phoneNumber'] ?></td>
                                 <td><?php echo $rows['Josephite'] ?></td>
                                 <td><?php echo $rows['S_event'] ?></td>
+                                <td><?php echo $rows['myImage'] ?></td>
 
                             </tr>
                         </tbody>

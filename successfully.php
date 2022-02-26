@@ -41,7 +41,7 @@ session_start();
                     Pay Now
                 </a>
             </p> -->
-            <p>By registering you will also become eligible for availing the goodies given during the Event.<br>Once the payment is done, <a href="./index.php">click here</a> to go to home screen.</p>
+            <p>By registering you will also become eligible for availing the goodies given during the Event.<br>Once the payment is done, <a href="./custom-index.php">click here</a> to go to home screen.</p>
         </main>
         <footer style="padding:20px 10px 20px 10px;font-size: 0.9em;border-top:2px double #1f3f1f;">
             <p>
