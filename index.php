@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     /> -->
     <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
-    <link rel="stylesheet" type="text/css" href="/custom-style.css" />
+    <link rel="stylesheet" type="text/css" href="./custom-style.css" />
     <title>Neerathon</title>
 </head>
 
