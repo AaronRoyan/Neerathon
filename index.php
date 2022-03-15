@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -164,9 +163,9 @@
                         <label for="second-event">10 KM - Rs 450</label>
                     </div>
                 </div>  
-
+                
                 <div class="upload-status">
-                    <input name="myImage" class="upload__id--btn" type="file" > 
+                    <!-- <input name="myImage" class="upload__id--btn" type="file" > 
                     <h3>
                         (Upload ID Card)
                     </h3>
@@ -175,7 +174,7 @@
                     <h3>
                         (Upload Payment) 
                     </h3>
-                    </input>
+                    </input> -->
                     
                     <p>
                         Once the form is submitted, payment and student ID will be verified and a confirmation mail will be sent to the given Email ID

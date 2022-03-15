@@ -41,8 +41,6 @@
                     <label class="form-label" for="typePasswordX">Password</label>
                   </div>
 
-                  <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-
                   <input type="submit" name="submit" class="btn btn-outline-light btn-lg px-5"> <br><br>
                   <a href="./index.php"><button class="btn btn-outline-light btn-lg px-5" type="button"> Back </button></a>
                   <div class="d-flex justify-content-center text-center mt-4 pt-1">
