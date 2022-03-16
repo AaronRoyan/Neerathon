@@ -33,8 +33,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['userName'])) {
         <navbar class="sliding-navbar">
             <a class="navbar-brand ps-3 guests" href="">Welcome, <?php echo $_SESSION['name']; ?></a>
             <ul class="navbar--items">
-                <li><a class="navbar--item" href="./Welcome.php">Registration</li> <br>
-                <li><a class="navbar--item" href="">Item 3</li> <br>
+                <!-- <li><a class="navbar--item" href="./Welcome.php">Registration</li> <br>
+                <li><a class="navbar--item" href="">Item 3</li> <br> -->
                 <li><a class="navbar--item" href="./logout.php">Logout</a></li> <br>
             </ul>
         </navbar>
@@ -43,44 +43,42 @@ if (isset($_SESSION['id']) && isset($_SESSION['userName'])) {
         <section>
             <!--for demo wrap-->
             <h1>Neerathon Entries</h1>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-            <div class="tbl-header">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Entries.." title="Type in a name">
+            <div class="tbl-header" id="myTable">
                 <table id="myTable" cellpadding="0" cellspacing="0" border="0">
                     <thead>
-                        <tr>
-                            <th class="header">Full Name</th>
-                            <th class="header">Email</th>
-                            <th class="header">Phone Number</th>
-                            <th class="header">Josephite</th>
-                            <th class="header">Event (KMs)</th>
-                            <th class="header">Reg ID</th>
-                            <th class="header">ID Card</th>
+                        <tr class="header">
+                            <th >Full Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Josephite</th>
+                            <th>Event (KMs)</th>
+                            <th>Reg ID</th>
+                            <th>ID Card</th>
                         </tr>
-                    </thead>
-                </table>
-            </div>
-            <div class="tbl-content">
-                <table cellpadding="0" cellspacing="0" border="0">
-                    <?php
-                    while ($rows = mysqli_fetch_assoc($result)) {
-                    ?>
-                        <tbody>
-                            <tr>
-                                <td><?php echo $rows['fullName'] ?></td>
-                                <td><?php echo $rows['email'] ?></td>
-                                <td><?php echo $rows['phoneNumber'] ?></td>
-                                <td><?php echo $rows['Josephite'] ?></td>
-                                <td><?php echo $rows['S_event'] ?></td>
-                                <td><?php echo $rows['id'] ?></td>
-                                <td style="word-wrap: break-word"><a href="<?php $rows['myImage'] ?>" target="_blank"><?php echo $rows['myImage'] ?></a></td>
+                    </thead>    
+            
+            
+                <?php
+                while ($rows = mysqli_fetch_assoc($result)) {
+                ?>
+                    
+                        <tr>
+                            <td><?php echo $rows['fullName'] ?></td>
+                            <td><?php echo $rows['email'] ?></td>
+                            <td><?php echo $rows['phoneNumber'] ?></td>
+                            <td><?php echo $rows['Josephite'] ?></td>
+                            <td><?php echo $rows['S_event'] ?></td>
+                            <td><?php echo $rows['id'] ?></td>
+                            <td style="word-wrap: break-word"><a href="<?php $rows['myImage'] ?>" target="_blank"><?php echo $rows['myImage'] ?></a></td>
 
-                            </tr>
-                        </tbody>
-                    <?php
-                    }
-                    ?>
+                        </tr>
+                    
+                <?php
+                }
+                ?>
                 </table>
-            </div>
+                </div>
         </section>
         <script>
             function myFunction() {

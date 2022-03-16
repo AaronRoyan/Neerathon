@@ -60,10 +60,10 @@ if ($conn->connect_error) {
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Neerathon Registration Successfull';
-            $mail->Body    = '$fullName, You have successfully registered for <b>Neerathon/b> in the $S_Event Km Marathon Event.<br> 
-                              Your partcipant id is NA-$id
-                              <h3 style="margin-left: 50px"><b>Use This Mail for entry of event</b></h3>';
-            //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->Body    = "$fullName, You have successfully registered for <b>Neerathon</b> in the $S_Event; 
+                             Km Marathon Event.<br> Your partcipant id is NA-$id
+                              <h3 style='margin-left: 50px'><b>Use This Mail for entry of event</b></h3>";
+            //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients";
         
             $mail->send();
             echo 'Message has been sent';
