@@ -22,12 +22,13 @@ session_start();
         <main style="padding: 10px;">
 
             <p><?php 
-                echo("Hello ".$_SESSION['username']);
-                ?>,
+                echo("Hello,");
+                ?>
             </p>
             <p>
                 You have successfully registered for <b>Neerathon.</b><br> Your partcipant id is
-            <h3 style="margin-left: 50px"><b>NA-001234</b></h3>
+            <h3 style="margin-left: 50px"><b>NA-001234</b></h3> 
+            <h4>Please check your Registered Mail for a <u>Confirmation Email</u><br> If not Contact the number given below:</h4>
             </p>
 
             <p><i>

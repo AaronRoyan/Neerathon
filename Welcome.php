@@ -21,6 +21,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['userName'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./Welcome.css">
         <script type="text/javascript" href="./Welcome.js"></script>
+        <link rel="icon" href="./image/icon.png">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <title>Admin</title>
     </head> 
@@ -42,16 +43,18 @@ if (isset($_SESSION['id']) && isset($_SESSION['userName'])) {
         <section>
             <!--for demo wrap-->
             <h1>Neerathon Entries</h1>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
             <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table id="myTable" cellpadding="0" cellspacing="0" border="0">
                     <thead>
                         <tr>
-                            <th>Full Name</th>
-                            <th>Email</th>
-                            <th>Phone Number</th>
-                            <th>Josephite</th>
-                            <th>Event (KMs)</th>
-                            <th>ID Card</th>
+                            <th class="header">Full Name</th>
+                            <th class="header">Email</th>
+                            <th class="header">Phone Number</th>
+                            <th class="header">Josephite</th>
+                            <th class="header">Event (KMs)</th>
+                            <th class="header">Reg ID</th>
+                            <th class="header">ID Card</th>
                         </tr>
                     </thead>
                 </table>
@@ -68,7 +71,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['userName'])) {
                                 <td><?php echo $rows['phoneNumber'] ?></td>
                                 <td><?php echo $rows['Josephite'] ?></td>
                                 <td><?php echo $rows['S_event'] ?></td>
-                                <td><?php echo $rows['myImage'] ?></td>
+                                <td><?php echo $rows['id'] ?></td>
+                                <td style="word-wrap: break-word"><a href="<?php $rows['myImage'] ?>" target="_blank"><?php echo $rows['myImage'] ?></a></td>
 
                             </tr>
                         </tbody>
@@ -79,6 +83,24 @@ if (isset($_SESSION['id']) && isset($_SESSION['userName'])) {
             </div>
         </section>
         <script>
+            function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+                }       
+            }
+            }
             // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
             $(window).on("load resize ", function() {
                 var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();

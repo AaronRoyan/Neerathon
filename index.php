@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     /> -->
     <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <link rel="icon" href="./image/icon.png">
     <link rel="stylesheet" type="text/css" href="./custom-style.css" />
     <title>Neerathon</title>
 </head>
@@ -134,7 +135,10 @@
                     <label for="number">Phone Number *</label>
                     <input type="number" class="form-input" name="phno" required/>
                 </div>
-
+                <div class="input-container">
+                    <label for="myImage">ID Drive Link *</label>
+                    <input type="url" class="form-input" name="myImage" required/>
+                </div>
                 <div class="radio-container">
                     <p>Are you a Josephite?</p>
                     <div>

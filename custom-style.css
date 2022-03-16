@@ -310,7 +310,8 @@ body {
 
 .registration__section form div input[type="text"],
 .registration__section form div input[type="email"],
-.registration__section form div input[type="number"] {
+.registration__section form div input[type="number"],
+.registration__section form div input[type="url"] {
     border: 0;
     outline: 0;
     font-size: 1.7rem;
